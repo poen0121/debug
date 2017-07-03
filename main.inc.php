@@ -19,6 +19,7 @@ if (!class_exists('hpl_debug')) {
 				// This error code is not included in error_reporting
 				return;
 			}
+			//response message
 			$title = '';
 			switch ($errno) {
 				case E_PARSE :
@@ -194,7 +195,7 @@ if (!class_exists('hpl_debug')) {
 		 */
 		public static function error_log_file($path = null, $peelName = 'PHP') {
 			if (!hpl_func_arg :: delimit2error() && !hpl_func_arg :: string2error(0) && !hpl_func_arg :: string2error(1)) {
-				if (strlen($path) == 0) {
+				if (!isset ($path { 0 })) {
 					hpl_error :: cast(__CLASS__ . '::' . __FUNCTION__ . '(): Empty path supplied as input', E_USER_WARNING, 1);
 				} else {
 					if (!hpl_path :: is_absolute($path) && hpl_path :: is_files($path)) {
