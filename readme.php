@@ -32,7 +32,7 @@
 >> About
 
 	GitHub : https://github.com/poen0121/debug
-
+	
 	Debug the operation mode.
 
 >> Usage Function
