@@ -79,9 +79,9 @@ if (!class_exists('hpl_debug')) {
 		public static function error_log_file($path = null) {
 			if (!hpl_func_arg :: delimit2error() && !hpl_func_arg :: string2error(0) && !hpl_func_arg :: string2error(1)) {
 				if (isset ($path { 0 }) && !hpl_path :: is_absolute($path) && hpl_path :: is_files($path)) {
-					$path = hpl_path :: norm($path);
-					ini_set('error_log', $path);
-					if (hpl_path :: norm(ini_get('error_log')) === $path) {
+					$normPath = hpl_path :: norm($path);
+					ini_set('error_log', $normPath);
+					if (hpl_path :: norm(ini_get('error_log')) === $normPath) {
 						return true;
 					}
 				}
